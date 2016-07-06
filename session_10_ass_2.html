@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script>
+		var myapp = angular.module("myapp", []);
+		myapp.controller("mycontroller", function($scope) {
+			$scope.firstname = "George";
+			$scope.lastname = "Kenley";
+		});
+	</script>
+</head>
+<body  ng-controller="mycontroller">
+	<div class="container">
+		<h3>User Details</h3>
+		<div>
+			<h4>First name</h4>
+			<p ng-bind="firstname"></p>	
+		</div>
+		<div>
+			<h4>Last name</h4>
+			<p ng-bind="lastname"></p>	
+		</div>
+	</div>
+	
+</body>
+</html>
